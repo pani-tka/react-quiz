@@ -1,11 +1,18 @@
 import React, {Component} from "react";
-import classes from './Quiz.css';
+import styles from './Quiz.module.css';
+import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
 
-class Quiz extends Component{
+class Quiz extends Component {
+  state = {
+    quiz: [],
+  }
   render() {
     return(
-      <div className={classes.Quiz}>
-        <h1>Quiz</h1>
+      <div className={styles.Quiz}>
+        <h1> Quiz </h1>
+        <div className={styles.QuizWrapper}>
+          <ActiveQuiz />
+        </div>
       </div>
     )
 
