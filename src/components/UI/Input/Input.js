@@ -26,7 +26,7 @@ const Input = props => {
         onChange={props.onChange}
       />
       {isInvalid(props)
-        ? <span>{props.errorMessage} || 'Enter valid value'</span>
+        ? <span>{props.errorMessage || 'Enter valid value'}</span>
         : null
       }
     </div>
