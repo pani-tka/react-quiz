@@ -1,11 +1,12 @@
 import React, {Component} from "react";
-import axios from 'axios';
+import { connect } from 'react-redux'
 import is from 'is_js';
 import styles from './Auth.module.css';
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input";
+import { auth } from "../../store/actions/auth";
 
-export default class Auth extends Component {
+class Auth extends Component {
 
   state = {
     formControls: {
@@ -36,32 +37,20 @@ export default class Auth extends Component {
     }
   }
 
-  loginHandler = async () => {
-    const authData = {
-      email: this.state.formControls.email.value,
-      password: this.state.formControls.password.value,
-      returnSecureToken: true
-    }
-    try {
-      const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCEEh3nUveYuC2EDQXDUA7pNqUZblWio9M', authData)
-      console.log(response)
-    } catch (e) {
-      console.log(e)
-    }
+  loginHandler = () => {
+    this.props.auth(
+      this.state.formControls.email.value,
+      this.state.formControls.password.value,
+      true
+    )
   }
 
-  registerHandler = async () => {
-    const authData = {
-      email: this.state.formControls.email.value,
-      password: this.state.formControls.password.value,
-      returnSecureToken: true
-    }
-    try {
-      const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCEEh3nUveYuC2EDQXDUA7pNqUZblWio9M', authData)
-      console.log(response)
-    } catch (e) {
-      console.log(e)
-    }
+  registerHandler = () => {
+    this.props.auth(
+      this.state.formControls.email.value,
+      this.state.formControls.password.value,
+      false
+    )
   }
 
   submitHandler = event => {
@@ -158,3 +147,11 @@ export default class Auth extends Component {
   }
 
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    auth: (email, password, isLogin) => dispatch(auth(email, password, isLogin))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Auth)
