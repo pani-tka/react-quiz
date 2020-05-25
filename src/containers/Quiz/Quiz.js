@@ -20,7 +20,7 @@ class Quiz extends Component {
     return (
       <div className={styles.Quiz}>
         <div className={styles.QuizWrapper}>
-          <h1>Ответьте на все вопросы</h1>
+          <h1>Answer the questions</h1>
 
           {
             this.props.loading || !this.props.quiz

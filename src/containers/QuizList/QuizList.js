@@ -29,7 +29,7 @@ class QuizList extends Component {
     return (
       <div className={styles.QuizList}>
         <div>
-          <h1>Список тестов</h1>
+          <h1>Quiz List</h1>
 
           {
             this.props.loading && this.props.quizes.length !== 0
