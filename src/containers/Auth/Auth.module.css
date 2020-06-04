@@ -1,28 +1,32 @@
 .Auth {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    padding-top: 100px;
-    width: 100%;
-    /*background: linear-gradient(270deg, #cef2fa 0%, #59bfef 100% );*/
-    background: linear-gradient(90deg, rgba(21,96,217,0.665703781512605) 0%, rgba(9,141,235,0.654499299719888) 48%, rgba(69,240,252,0.6713060224089635) 100%);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding-top: 100px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(21, 96, 217, 0.665703781512605) 0%,
+    rgba(9, 141, 235, 0.654499299719888) 48%,
+    rgba(69, 240, 252, 0.6713060224089635) 100%
+  );
 }
 
 .Auth > div {
-    width: 100%;
-    max-width: 600px;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
 }
 
 .Auth h1 {
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
 }
 
 .AuthForm {
-    background: transparent;
-    border: 2px solid #fff;
-    padding: 15px;
-    border-radius: 5px;
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 5px;
 }

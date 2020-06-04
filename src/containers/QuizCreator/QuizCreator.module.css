@@ -1,32 +1,37 @@
 .QuizCreator {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    flex-grow: 1;
-    width: 100%;
-    background: linear-gradient(90deg, rgba(111,21,217,0.665703781512605) 0%, rgba(9,68,235,0.654499299719888) 48%, rgba(69,203,252,0.6713060224089635) 100%);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  flex-grow: 1;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(111, 21, 217, 0.665703781512605) 0%,
+    rgba(9, 68, 235, 0.654499299719888) 48%,
+    rgba(69, 203, 252, 0.6713060224089635) 100%
+  );
 }
 
 .QuizCreator > div {
-    width: 100%;
-    max-width: 600px;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
 }
 
 .QuizCreator h1 {
-    color: #fff;
-    text-align: center;
+  color: #fff;
+  text-align: center;
 }
 
 .QuizCreator hr {
-    border: 0;
-    height: 1px;
-    background: #fff;
+  border: 0;
+  height: 1px;
+  background: #fff;
 }
 
 .QuizCreator form {
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 15px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 15px;
 }
